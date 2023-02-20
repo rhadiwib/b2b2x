@@ -1,0 +1,51 @@
+{
+  "applications": ["productCatalog", "quotedetails"],
+  "changelogDate": "20230220095529",
+  "clientRootFolder": "quotedetails",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "cpq_quotedetails",
+  "fields": [
+    {
+      "fieldName": "quoteId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "quoteStatus",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "quotedetails",
+  "name": "CpqQuotedetails",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "project",
+      "ownerSide": true,
+      "relationshipName": "project",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "bundle",
+      "otherEntityRelationshipName": "cpqQuotedetails",
+      "relationshipName": "bundle",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "version",
+      "otherEntityRelationshipName": "cpqQuotedetails",
+      "relationshipName": "version",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

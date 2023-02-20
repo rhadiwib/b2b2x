@@ -1,0 +1,34 @@
+{
+  "applications": ["productCatalog", "quotedetails"],
+  "changelogDate": "20230220095629",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "transaction",
+  "fields": [
+    {
+      "fieldName": "transactionId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "channel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "statusCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "statusDesc",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Transaction",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

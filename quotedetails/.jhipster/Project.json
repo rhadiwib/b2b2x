@@ -1,0 +1,52 @@
+{
+  "applications": ["productCatalog", "quotedetails"],
+  "changelogDate": "20230220095829",
+  "clientRootFolder": "quotedetails",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "project",
+  "fields": [
+    {
+      "fieldName": "projectId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "projectName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "discountTier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "companyName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "accountManager",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "estQuantity",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "contractStartPeriod",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "contractEndPeriod",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "quotedetails",
+  "name": "Project",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}
