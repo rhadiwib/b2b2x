@@ -1,0 +1,105 @@
+application {
+  config {
+    baseName productCatalog
+    applicationType gateway
+    packageName com.tsel.mepro.productcatalog
+    serviceDiscoveryType eureka
+    authenticationType oauth2
+    prodDatabaseType postgresql
+    cacheProvider hazelcast
+    buildTool maven
+    clientFramework react
+    reactive true
+  }
+  entities *
+}
+
+
+application {
+  config {
+    baseName quotedetails
+    applicationType microservice
+    packageName com.tsel.mepro.quotedetails
+    serviceDiscoveryType eureka
+    authenticationType oauth2
+    prodDatabaseType postgresql
+    cacheProvider hazelcast
+    buildTool maven
+    serverPort 8081
+    reactive true
+  }
+  entities Transaction, Project, Bundle, Version, Quotedetails
+}
+
+
+// Declare the transaction entity
+entity Transaction {
+  transactionId String required
+  channel String
+  statusCode String
+  statusDesc String
+}
+
+// Declare the project entity
+entity Project {
+  projectId String required
+  projectName String
+  discountTier String
+  companyName String
+  accountManager String
+  estQuantity Integer
+  contractStartPeriod ZonedDateTime
+  contractEndPeriod ZonedDateTime
+}
+
+// Declare the bundle entity
+entity Bundle {
+  bundleId String required
+  bundleName String
+  quoteTemplateId Integer
+  isCompatible Boolean
+  recurringAmount Integer
+  singleAmount Integer
+  usageAmount Integer
+  totalAmount Integer
+  createdAt ZonedDateTime
+  createdBy String
+  quantity Integer
+}
+
+// Declare the version entity
+entity Version {
+  versionId Integer required
+  versionNumber String
+  active Boolean
+}
+
+// Declare the cpqQuotedetails entity and its relationships with other entities
+entity CpqQuotedetails {
+  quoteId String required
+  quoteStatus String
+  createdAt ZonedDateTime
+//   project Project
+//   bundles Bundle
+//   versions Version
+}
+
+entity Quotedetails {
+    transaction Transaction
+    cpqQuotedetails CpqQuotedetails
+
+}
+
+// Declare relationships between entities
+
+relationship OneToOne {
+    CpqQuotedetails to Project
+}
+
+relationship OneToMany {
+    CpqQuotedetails{bundles} to Bundle{cpqQuotedetails}
+    CpqQuotedetails{versions} to Version{cpqQuotedetails}
+}
+ 
+paginate all with pagination
+service all with serviceImpl
