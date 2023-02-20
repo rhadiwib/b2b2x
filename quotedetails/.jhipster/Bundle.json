@@ -1,0 +1,72 @@
+{
+  "name": "Bundle",
+  "fields": [
+    {
+      "fieldName": "bundleId",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "bundleName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "quoteTemplateId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "isCompatible",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "recurringAmount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "singleAmount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "usageAmount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "totalAmount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "quantity",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "cpqQuotedetails",
+      "otherEntityRelationshipName": "bundles",
+      "relationshipName": "cpqQuotedetails"
+    }
+  ],
+  "entityTableName": "bundle",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": [
+    "productCatalog",
+    "quotedetails"
+  ]
+}

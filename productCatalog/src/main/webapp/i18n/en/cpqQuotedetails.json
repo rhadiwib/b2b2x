@@ -1,0 +1,29 @@
+{
+  "productCatalogApp": {
+    "cpqQuotedetails": {
+      "home": {
+        "title": "Cpq Quotedetails",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cpq Quotedetails",
+        "createOrEditLabel": "Create or edit a Cpq Quotedetails",
+        "notFound": "No Cpq Quotedetails found"
+      },
+      "created": "A new Cpq Quotedetails is created with identifier {{ param }}",
+      "updated": "A Cpq Quotedetails is updated with identifier {{ param }}",
+      "deleted": "A Cpq Quotedetails is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cpq Quotedetails {{ id }}?"
+      },
+      "detail": {
+        "title": "Cpq Quotedetails"
+      },
+      "id": "ID",
+      "quoteId": "Quote Id",
+      "quoteStatus": "Quote Status",
+      "createdAt": "Created At",
+      "project": "Project",
+      "bundles": "Bundles",
+      "versions": "Versions"
+    }
+  }
+}
