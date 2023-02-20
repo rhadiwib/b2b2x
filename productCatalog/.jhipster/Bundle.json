@@ -1,0 +1,69 @@
+{
+  "applications": ["productCatalog", "quotedetails"],
+  "changelogDate": "20230220095249",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "bundle",
+  "fields": [
+    {
+      "fieldName": "bundleId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "bundleName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "quoteTemplateId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "isCompatible",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "recurringAmount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "singleAmount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "usageAmount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "totalAmount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "quantity",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Bundle",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "cpqQuotedetails",
+      "otherEntityRelationshipName": "bundle",
+      "relationshipName": "cpqQuotedetails",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

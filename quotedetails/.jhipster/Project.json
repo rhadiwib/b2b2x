@@ -1,0 +1,53 @@
+{
+  "name": "Project",
+  "fields": [
+    {
+      "fieldName": "projectId",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "projectName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "discountTier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "companyName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "accountManager",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "estQuantity",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "contractStartPeriod",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "contractEndPeriod",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "project",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": [
+    "productCatalog",
+    "quotedetails"
+  ]
+}
