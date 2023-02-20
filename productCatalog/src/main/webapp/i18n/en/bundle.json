@@ -1,0 +1,35 @@
+{
+  "productCatalogApp": {
+    "bundle": {
+      "home": {
+        "title": "Bundles",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Bundle",
+        "createOrEditLabel": "Create or edit a Bundle",
+        "notFound": "No Bundles found"
+      },
+      "created": "A new Bundle is created with identifier {{ param }}",
+      "updated": "A Bundle is updated with identifier {{ param }}",
+      "deleted": "A Bundle is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Bundle {{ id }}?"
+      },
+      "detail": {
+        "title": "Bundle"
+      },
+      "id": "ID",
+      "bundleId": "Bundle Id",
+      "bundleName": "Bundle Name",
+      "quoteTemplateId": "Quote Template Id",
+      "isCompatible": "Is Compatible",
+      "recurringAmount": "Recurring Amount",
+      "singleAmount": "Single Amount",
+      "usageAmount": "Usage Amount",
+      "totalAmount": "Total Amount",
+      "createdAt": "Created At",
+      "createdBy": "Created By",
+      "quantity": "Quantity",
+      "cpqQuotedetails": "Cpq Quotedetails"
+    }
+  }
+}

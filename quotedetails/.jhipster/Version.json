@@ -1,0 +1,40 @@
+{
+  "name": "Version",
+  "fields": [
+    {
+      "fieldName": "versionId",
+      "fieldType": "Integer",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "versionNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "active",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "cpqQuotedetails",
+      "otherEntityRelationshipName": "versions",
+      "relationshipName": "cpqQuotedetails"
+    }
+  ],
+  "entityTableName": "version",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": [
+    "productCatalog",
+    "quotedetails"
+  ]
+}
